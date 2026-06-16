@@ -21,22 +21,7 @@ webcamcapture/
         └── socket.io.min.js
 ```
 
-## Voraussetzungen
-
-- Python 3.x
-- [Arduino Framework](https://github.com/arduino) mit `arduino.app_bricks.web_ui`
-- OpenCV für Python
-
-```bash
-pip install opencv-python
-```
-
-## Starten
-
-```bash
-# Im Projektverzeichnis:
-python python/main.py
-```
+Per VSCode oder AppLab auf den Ardunio Uno Q schieben und App starten.
 
 Anschließend die angezeigte URL im Browser öffnen (z. B. `http://localhost:5000`).
 
