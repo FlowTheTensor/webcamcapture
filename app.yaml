@@ -1,0 +1,6 @@
+name: Webcam Capture
+description: Zeigt den Webcam-Feed und speichert Bilder aufsteigend nummeriert in einen wählbaren Ordner
+ports: []
+bricks:
+- arduino:web_ui: {}
+icon: 📷

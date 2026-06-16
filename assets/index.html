@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Capture</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <h1>Webcam Capture</h1>
+        </div>
+
+        <div class="main">
+            <!-- Video feed + hidden canvas for frame capture -->
+            <div class="video-wrapper">
+                <img id="videoFeed" alt="Webcam-Feed">
+                <canvas id="captureCanvas" style="display:none"></canvas>
+                <div id="statusOverlay" class="status-overlay">Verbinde…</div>
+                <div id="flash" class="flash"></div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <!-- Folder selection -->
+                <div class="card">
+                    <h2>Speicherordner</h2>
+                    <button id="pickFolderBtn">Ordner wählen…</button>
+                    <p id="folderStatus" class="hint">Kein Ordner gewählt</p>
+                </div>
+
+                <!-- Capture button -->
+                <div class="card capture-card">
+                    <button id="captureBtn" class="capture-btn" disabled>
+                        <span class="btn-label">Aufnehmen</span>
+                        <span class="btn-hint">Halten = Dauermodus</span>
+                    </button>
+                    <div class="counter-row">
+                        <span id="captureCount" class="counter">0</span>
+                        <span class="counter-label">Bilder gespeichert</span>
+                    </div>
+                    <p id="lastFile" class="hint"></p>
+                </div>
+
+                <!-- Browser compatibility note -->
+                <p id="compatNote" class="compat-note"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
